@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="Light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <header class="page-header">
+    <i class="header-return" data-icon="arrow-left" onclick="location.href='dashboard.html'"></i>
+    <b class="header-label">Profile</b>
+    <i class="header-qr" data-icon="qr-code" onclick="qrAlert('https://www.facebook.com/share/16xsQGPguu/')"></i>
+  </header>
+  <main class="main-page">
+    <section class="profile-con">
+      <div class="profile-card">
+        <img src="../assets/img/profile.png" alt="profile" class="profile-img">
+        <b class="profile-username">Paolo Flores</b>
+        <p class="profile-email">paoloflores.pao@gmail.com</p>
+      </div>
+    </section>
+    <section class="menu-con">
+      <b class="menu-label">Profile Settings</b>
+      <ul>
+        <li>
+          <p class="menu-item-label">Edit Profile</p>
+          <i class="menu-item-btn" data-icon="right"></i>
+        </li>
+        <li>
+          <p class="menu-item-label">Update Email Address</p>
+          <i class="menu-item-btn" data-icon="right"></i>
+        </li>
+        <li>
+          <p class="menu-item-label">Change Password</p>
+          <i class="menu-item-btn" data-icon="right"></i>
+        </li>
+      </ul>
+    </section>
+    <section class="menu-con">
+      <b class="menu-label">Preferences</b>
+      <ul>
+        <li>
+          <p class="menu-item-label">Theme (Dark/Light Mode)</p>
+          <select id="toggleTheme" class="menu-item-select" onchange="changeTheme(this.value)">
+            <option value="Light">Light</option>
+            <option value="Dark">Dark</option>
+          </select>
+        </li>
+      </ul>
+    </section>
+    <section class="menu-con">
+      <b class="menu-label">Account</b>
+      <ul>
+        <li>
+          <p class="menu-item-label">Delete Account</p>
+          <i class="menu-item-btn" data-icon="right"></i>
+        </li>
+        <li>
+          <p class="menu-item-label">Logout</p>
+          <i class="menu-item-btn" data-icon="logout-2"></i>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="../js/theme.js"></script>
+  <script src="../js/icons.js"></script>
+  <script src="../js/alert.js"></script>
+</body>
+</html>

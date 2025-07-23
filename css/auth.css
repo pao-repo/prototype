@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+}
+@font-face {
+  font-family: poppins;
+  src: url(../assets/fonts/poppins.ttf);
+}
+html.Light {
+  --primaryColor: #F0F3F8;
+  --secondaryColor: #FFFFFF;
+  --accentColor: #0B57CF;
+  --textColor: #000000;
+  --paragraphColor: #5E5E5E;
+}
+html.Dark {
+  --primaryColor: #1E1F21;
+  --secondaryColor: #38393B;
+  --accentColor: #0B57CF;
+  --textColor: #FFFFFE;
+  --paragraphColor: #9C9D9F;
+}
+body {
+  height: 100vh;
+  background-color: var(--primaryColor);
+  display: grid;
+  place-items: center;
+}
+.form-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-con>.form.show {
+  transform: scale(1);
+  opacity: 1;
+}
+.form-con>.form {
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: var(--secondaryColor);
+  display: grid;
+  row-gap: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 500ms ease;
+  padding: 20px;
+}
+.form-con>.form>.form-label {
+  border-bottom: 3px solid var(--accentColor);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+.form-con>.form>.form-label>h1 {
+  font-size: 40px;
+  color: var(--textColor);
+}
+.form-con>.form>.form-label>p {
+  font-size: 20px;
+  color: var(--paragraphColor);
+}
+.form-con>.form>.input-con {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.form-con>.form>.input-con>.input-label {
+  font-size: 20px;
+  color: var(--textColor);
+  margin-left: 10px;
+}
+.form-con>.form>.input-con>.input-field {
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  font-size: 23px;
+  color: var(--textColor);
+  border: 1px solid var(--textColor);
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+.form-con>.form>.input-con>.input-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  right: 5px;
+  bottom: 2.5px;
+}
+.form-con>.form>.input-con>.input-btn>.input-icon>svg{
+  stroke: var(--textColor);
+}
+.form-con>.form>.item-left {
+  display: flex;
+  justify-content: left;
+}
+.form-con>.form>.item-center {
+  display: flex;
+  justify-content: center;
+}
+.form-con>.form>.item-right {
+  display: flex;
+  justify-content: right;
+}
+.form-con>.form>.item-right>.forgot-pass {
+  font-size: 20px;
+  color: var(--accentColor);
+}
+.form-con>.form>.item-left>.agreement-box {
+  width: 20px;
+  height: 20px;
+}
+.form-con>.form>.item-left>.agreement {
+  font-size: 20px;
+  color: var(--textColor);
+  margin-left: 10px;
+}
+.form-con>.form>.item-left>.agreement>span {
+  color: var(--accentColor);
+}
+.form-con>.form>.submit-btn {
+  width: 100%;
+  height: 35px;
+  background-color: var(--accentColor);
+  font-size: 20px;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+}
+.form-con>.form>.item-center>.change-form {
+  font-size: 20px;
+  color: var(--textColor);
+}
+.form-con>.form>.item-center>.change-form>span {
+  color: var(--accentColor);
+}
+.form-con>.form>.input-con>.input-field.valid {
+  border: 2px solid #34A853;
+}
+.form-con>.form>.input-con>.input-field.warn {
+  border: 2px solid #FFBF11;
+}
+.form-con>.form>.input-con>.input-field.invalid {
+  border: 2px solid #EA4235;
+}

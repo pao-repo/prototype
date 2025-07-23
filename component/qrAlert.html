@@ -1,0 +1,29 @@
+<style>
+  .qrAlert-con {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 10px;
+  }
+  .qrAlert-con>.qr-code {
+    width: 100px;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .qrAlert-con>.qr-link {
+    width: 70%;
+    font-size: 15px;
+    color: var(--accentColor);
+    text-align: center;
+    word-wrap: break-word;
+  }
+</style>
+<div class="qrAlert-con">
+  <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" alt="qr">
+  <p class="qr-link" onclick="location.href=this.innerText"></p>
+</div>

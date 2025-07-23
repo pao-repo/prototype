@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="Light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auth</title>
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div class="form-con">
+    <form method="POST" class="form show" id="signinForm">
+      <input type="hidden" name="type" value="signin">
+      <div class="form-label">
+        <h1>Sign In</h1>
+        <p>Login your account.</p>
+      </div>
+      <div class="input-con">
+        <b class="input-label">Email</b>
+        <input type="email" name="" class="input-field">
+      </div>
+      <div class="input-con">
+        <b class="input-label">Password</b>
+        <input type="password" name="" class="input-field" id="passField">
+        <div class="input-btn" onclick="showPass()">
+          <i class="input-icon" data-icon="eye"></i>
+        </div>
+      </div>
+      <div class="item-right">
+        <p class="forgot-pass">Forgot Password</p>
+      </div>
+      <button type="submit" class="submit-btn">Sign In</button>
+      <div class="item-center">
+        <p class="change-form">Don't have an account? <span onclick="changeForm()">Sign Up</span></p>
+      </div>
+    </form>
+    <form method="POST" class="form" id="signupForm">
+      <div class="form-label">
+        <h1>Sign Up</h1>
+        <p>Create your account.</p>
+      </div>
+      <div class="input-con">
+        <b class="input-label">Username</b>
+        <input type="text" name="up-username" class="input-field" id="upUsername" minlength="2" required>
+      </div>
+      <div class="input-con">
+        <b class="input-label">Email</b>
+        <input type="email" name="up-email" class="input-field" id="upEmail" required>
+      </div>
+      <div class="input-con">
+        <b class="input-label">Password</b>
+        <input type="password" name="up-password" class="input-field" id="upPassword" minlength="8" required>
+      </div>
+      <div class="input-con">
+        <b class="input-label">Confirm Password</b>
+        <input type="password" name="confirm-password" class="input-field" id="confirmPassword" required>
+      </div>
+      <div class="item-left">
+        <input type="checkbox" class="agreement-box" required>
+        <p class="agreement">I agree to the <span>Terms and Conditions</span></p>
+      </div>
+      <button type="submit" class="submit-btn">Sign Up</button>
+      <div class="item-center">
+        <p class="change-form">Already have an account. <span onclick="changeForm()">Sign In</span></p>
+      </div>
+    </form>
+  </div>
+  <script src="../js/auth.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/icons.js"></script>
+</body>
+</html>
